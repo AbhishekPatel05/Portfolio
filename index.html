@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Port.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/A logo.jpg" class="logo" />
+
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-text">
+          <h1>
+            <p>
+              Web Developer/Web Designer<br />
+              UI/UX Designer
+            </p>
+            Hii, I'm <span>Abhishek</span> Patel<br />From India
+          </h1>
+          <img src="images/bg1.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <!-----------------about--------------->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Me.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello everyone, I'm Abhishek Patel.<br />
+              I'm 23 year old. I'm from Indore.<br />
+              I'm a student, doing DDMCA from<br />
+              Acropolis Institute Of Technology and Research college.<br />
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>UI/UX</li>
+                <li>Web Development</li>
+                <li>Communication</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>12th From Dewas</li>
+                <li>PG from Acropolis Indore</li>
+                <li>1 Month intern</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>1 Month</li>
+                <li>Oasis Infobyte</li>
+                <li>Internship</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------services------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>
+              The Designing in web page is use because its help to look our page
+              attractive.
+            </p>
+          </div>
+          <div>
+            <h2>Web Development</h2>
+            <p>
+              The Web Development is come under full stack Development in which
+              we develop website for ourself or user.
+            </p>
+          </div>
+          <div>
+            <h2>UI/UX Designer</h2>
+            <p>
+              Creat user friendly interface that enables user to understand how
+              to use complex technical products.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------Project---------->
+
+    <div id="project">
+      <div class="container">
+        <h1 class="sub-title">Project</h1>
+        <div class="services-list">
+          <div>
+            <h2>Online Voting System</h2>
+            <p>
+              It’s a college based online voting website where the students can
+              vote their favourite candidate by their g-mail and their password
+              which according to college database.
+            </p>
+            <a href="https://github.com/AbhishekPatel05/Voting-System"
+              >View on GitHub</a
+            >
+          </div>
+          <div>
+            <h2>Luggage Store Facility</h2>
+            <p>
+              It's UI/UX based Project in which people who are on tour or
+              vacation and want to store their Luggage
+            </p>
+            <a
+              href="https://www.figma.com/file/nd8Mjp7xw2lpkLaSo0NQJl/Untitled?type=design&t=3EiPKdw3BhV8IBsl-6"
+              >View on Figma</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------contact--------->
+    <div id="contact">
+      <div class="container">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p>Email - abhishekpatel05022000@gmail.com</p>
+          <p>Mobile - 8085073626</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
